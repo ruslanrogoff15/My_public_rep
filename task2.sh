@@ -1,22 +1,16 @@
 #!/bin/bash
 
-# Инициализируем сумму
 sum=0
 
 echo "Вводите числа по одному (0 для завершения):"
 
-# Бесконечный цикл для чтения чисел
 while true; do
-    # Читаем число из стандартного ввода
-    read number
+       read number
     
-    # Проверяем, является ли число 0
-    if [ "$number" -eq 0 ]; then
-        # Выводим сумму и завершаем цикл
-        echo "Сумма: $sum"
+      if [ "$number" -eq 0 ]; then
+           echo "Сумма: $sum"
         break
     fi
     
-    # Добавляем число к сумме
-    sum=$((sum + number))
+      sum=$((sum + number))
 done
